@@ -1,0 +1,49 @@
+{
+  "image_auroc": 0.9968487394957983,
+  "image_auroc_ci95": [
+    0.9903869215860454,
+    1.0
+  ],
+  "pixel_auroc": 0.9827347353097898,
+  "au_pro": 0.9284556698182689,
+  "calibrated": {
+    "precision": 0.9752066115702479,
+    "recall": 0.9915966386554622,
+    "f1": 0.9833333333333334,
+    "fpr": 0.09375,
+    "tp": 118,
+    "fp": 3,
+    "fn": 1,
+    "tn": 29
+  },
+  "oracle_best_f1": {
+    "f1": 0.9875518672199171,
+    "threshold": 1.2986934185028076,
+    "precision": 0.9754098360655737,
+    "recall": 1.0
+  },
+  "category": "zipper",
+  "seed": 0,
+  "config_hash": "7ab48005b48c8b97",
+  "model_version": "72abaaee0286",
+  "n_test": 151,
+  "n_test_good": 32,
+  "n_test_defective": 119,
+  "threshold_image": 1.3420509099960327,
+  "threshold_pixel": 1.3420509099960327,
+  "latency": {
+    "n": 60,
+    "p50_ms": 728.9621999998417,
+    "p95_ms": 788.1896399992002,
+    "mean_ms": 739.4650616666999,
+    "fps": 1.3523289359284583,
+    "peak_rss_mb": 856.54296875
+  },
+  "rss_after_load_mb": 748.12109375,
+  "bank_shape": [
+    16934,
+    1536
+  ],
+  "bank_mb": 99.22265625,
+  "eval_seconds": 147.8047215938568
+}

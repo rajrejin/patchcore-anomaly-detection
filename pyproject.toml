@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mvtec-inspection"
+version = "0.1.0"
+description = "PatchCore industrial visual inspection on MVTec AD, implemented from scratch"
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+    "numpy", "scipy", "scikit-learn", "opencv-python-headless", "pillow", "pandas",
+    "matplotlib", "pyyaml", "tqdm", "psutil", "typer", "pydantic", "pydantic-settings",
+    "fastapi", "uvicorn[standard]", "python-multipart", "prometheus-client", "httpx",
+    "streamlit", "onnx", "onnxruntime", "torch", "torchvision",
+]
+
+[project.optional-dependencies]
+faiss = ["faiss-cpu"]
+dev = ["pytest", "pytest-cov", "ruff", "mypy", "pre-commit", "types-PyYAML", "pandas-stubs"]
+
+[project.scripts]
+mvinspect = "inspection.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "api", "app", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "C4"]
+ignore = ["B008"]
+
+[tool.ruff.lint.per-file-ignores]
+# the study guide generator is mostly prose; long string lines are kept whole
+"scripts/make_study_guide.py" = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = false
+warn_unused_ignores = true
+warn_redundant_casts = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+ignore_missing_imports = true
+files = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "src"]
+addopts = "-q --strict-markers"
+markers = ["data: needs the real MVTec AD dataset", "artifacts: needs trained artifacts"]
+
+[tool.coverage.run]
+source = ["src/inspection", "api"]
+omit = []
+
+[tool.coverage.report]
+fail_under = 80

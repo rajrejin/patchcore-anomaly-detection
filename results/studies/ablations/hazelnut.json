@@ -1,0 +1,284 @@
+{
+  "coreset@0.01": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "tp": 70,
+      "fp": 0,
+      "fn": 0,
+      "tn": 40
+    },
+    "threshold": 2.5412700176239014,
+    "bank_shape": [
+      2760,
+      1536
+    ],
+    "bank_mb": 16.171875,
+    "n_calib": 39,
+    "device": "cuda",
+    "pixel_auroc": 0.9845631917846591,
+    "variant": "coreset@0.01",
+    "backbone": "resnet50",
+    "preprocessing": "none",
+    "coreset_ratio": 0.01,
+    "n_fit": null,
+    "seed": 0,
+    "latency": {
+      "n": 20,
+      "p50_ms": 265.6014500025776,
+      "p95_ms": 301.6526599994904,
+      "mean_ms": 264.89411999991717,
+      "fps": 3.775093233478768,
+      "peak_rss_mb": 556.3203125
+    },
+    "latency_note": "measured on the CPU after the study, banks rebuilt from order"
+  },
+  "coreset@0.1": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "tp": 70,
+      "fp": 0,
+      "fn": 0,
+      "tn": 40
+    },
+    "threshold": 2.451918125152588,
+    "bank_shape": [
+      27597,
+      1536
+    ],
+    "bank_mb": 161.701171875,
+    "n_calib": 39,
+    "device": "cuda",
+    "pixel_auroc": 0.9844879682279962,
+    "variant": "coreset@0.1",
+    "backbone": "resnet50",
+    "preprocessing": "none",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 0,
+    "latency": {
+      "n": 20,
+      "p50_ms": 1038.9508999996906,
+      "p95_ms": 1202.0418549991518,
+      "mean_ms": 1045.2613600005861,
+      "fps": 0.9566985237064912,
+      "peak_rss_mb": 1092.83984375
+    },
+    "latency_note": "measured on the CPU after the study, banks rebuilt from order"
+  },
+  "coreset@0.25": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "tp": 70,
+      "fp": 0,
+      "fn": 0,
+      "tn": 40
+    },
+    "threshold": 2.4451801776885986,
+    "bank_shape": [
+      68992,
+      1536
+    ],
+    "bank_mb": 404.25,
+    "n_calib": 39,
+    "device": "cuda",
+    "pixel_auroc": 0.9841405731359036,
+    "variant": "coreset@0.25",
+    "backbone": "resnet50",
+    "preprocessing": "none",
+    "coreset_ratio": 0.25,
+    "n_fit": null,
+    "seed": 0,
+    "latency": {
+      "n": 20,
+      "p50_ms": 2501.6025499990064,
+      "p95_ms": 2729.3830549982886,
+      "mean_ms": 2516.983739999341,
+      "fps": 0.3973009376692524,
+      "peak_rss_mb": 1901.3203125
+    },
+    "latency_note": "measured on the CPU after the study, banks rebuilt from order"
+  },
+  "_meta": {
+    "seed_default": 0
+  },
+  "baseline_seed1": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "tp": 70,
+      "fp": 0,
+      "fn": 0,
+      "tn": 40
+    },
+    "threshold": 2.488142967224121,
+    "bank_shape": [
+      27597,
+      1536
+    ],
+    "bank_mb": 161.701171875,
+    "n_calib": 39,
+    "device": "cuda",
+    "pixel_auroc": 0.9842611746618938,
+    "variant": "baseline_seed1",
+    "backbone": "resnet50",
+    "preprocessing": "none",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 1
+  },
+  "baseline_seed2": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 1.0,
+      "recall": 0.9714285714285714,
+      "f1": 0.9855072463768115,
+      "fpr": 0.0,
+      "tp": 68,
+      "fp": 0,
+      "fn": 2,
+      "tn": 40
+    },
+    "threshold": 2.603908061981201,
+    "bank_shape": [
+      27597,
+      1536
+    ],
+    "bank_mb": 161.701171875,
+    "n_calib": 39,
+    "device": "cuda",
+    "pixel_auroc": 0.9844308682497851,
+    "variant": "baseline_seed2",
+    "backbone": "resnet50",
+    "preprocessing": "none",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 2
+  },
+  "pre_gaussian_blur_k3_s1": {
+    "image_auroc": 0.9996428571428572,
+    "calibrated": {
+      "precision": 0.9859154929577465,
+      "recall": 1.0,
+      "f1": 0.9929078014184397,
+      "fpr": 0.025,
+      "tp": 70,
+      "fp": 1,
+      "fn": 0,
+      "tn": 39
+    },
+    "threshold": 2.4477500915527344,
+    "bank_shape": [
+      27597,
+      1536
+    ],
+    "bank_mb": 161.701171875,
+    "n_calib": 39,
+    "device": "cuda",
+    "pixel_auroc": 0.9836618442342692,
+    "variant": "pre_gaussian_blur_k3_s1",
+    "backbone": "resnet50",
+    "preprocessing": "gaussian_blur_k3_s1",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 0
+  },
+  "pre_cielab": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 0.9859154929577465,
+      "recall": 1.0,
+      "f1": 0.9929078014184397,
+      "fpr": 0.025,
+      "tp": 70,
+      "fp": 1,
+      "fn": 0,
+      "tn": 39
+    },
+    "threshold": 2.1916823387145996,
+    "bank_shape": [
+      27597,
+      1536
+    ],
+    "bank_mb": 161.701171875,
+    "n_calib": 39,
+    "device": "cuda",
+    "pixel_auroc": 0.9835348757170586,
+    "variant": "pre_cielab",
+    "backbone": "resnet50",
+    "preprocessing": "cielab",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 0
+  },
+  "pre_gray_opening_3x3": {
+    "image_auroc": 0.9989285714285714,
+    "calibrated": {
+      "precision": 0.9855072463768116,
+      "recall": 0.9714285714285714,
+      "f1": 0.9784172661870504,
+      "fpr": 0.025,
+      "tp": 68,
+      "fp": 1,
+      "fn": 2,
+      "tn": 39
+    },
+    "threshold": 2.2590863704681396,
+    "bank_shape": [
+      27597,
+      1536
+    ],
+    "bank_mb": 161.701171875,
+    "n_calib": 39,
+    "device": "cuda",
+    "pixel_auroc": 0.9816937408316981,
+    "variant": "pre_gray_opening_3x3",
+    "backbone": "resnet50",
+    "preprocessing": "gray_opening_3x3",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 0
+  },
+  "backbone_wide_resnet50_2": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "tp": 70,
+      "fp": 0,
+      "fn": 0,
+      "tn": 40
+    },
+    "threshold": 2.4774835109710693,
+    "bank_shape": [
+      27597,
+      1536
+    ],
+    "bank_mb": 161.701171875,
+    "n_calib": 39,
+    "device": "cuda",
+    "pixel_auroc": 0.9840960525657868,
+    "variant": "backbone_wide_resnet50_2",
+    "backbone": "wide_resnet50_2",
+    "preprocessing": "none",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 0
+  }
+}

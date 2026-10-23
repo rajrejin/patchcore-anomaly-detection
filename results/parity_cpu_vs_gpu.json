@@ -1,0 +1,95 @@
+{
+  "main_runs": [
+    {
+      "category": "leather",
+      "gpu_device": "cuda",
+      "image_auroc_cpu": 1.0,
+      "image_auroc_gpu": 1.0,
+      "pixel_auroc_cpu": 0.9892121795641873,
+      "pixel_auroc_gpu": 0.9892113048996547,
+      "image_auroc_abs_diff": 0.0,
+      "pixel_auroc_abs_diff": 8.74664532579672e-07,
+      "bank_rows_cpu": 17326,
+      "bank_rows_gpu": 17326,
+      "threshold_cpu": 1.3589022159576416,
+      "threshold_gpu": 1.3588982820510864
+    },
+    {
+      "category": "hazelnut",
+      "gpu_device": "cuda",
+      "image_auroc_cpu": 1.0,
+      "image_auroc_gpu": 1.0,
+      "pixel_auroc_cpu": 0.9844896929621179,
+      "pixel_auroc_gpu": 0.9844879682279962,
+      "image_auroc_abs_diff": 0.0,
+      "pixel_auroc_abs_diff": 1.724734121633098e-06,
+      "bank_rows_cpu": 27597,
+      "bank_rows_gpu": 27597,
+      "threshold_cpu": 2.4519269466400146,
+      "threshold_gpu": 2.451918125152588
+    },
+    {
+      "category": "screw",
+      "gpu_device": "cuda",
+      "image_auroc_cpu": 0.9497847919655668,
+      "image_auroc_gpu": 0.9497847919655668,
+      "pixel_auroc_cpu": 0.989640932480623,
+      "pixel_auroc_gpu": 0.9896399178462149,
+      "image_auroc_abs_diff": 0.0,
+      "pixel_auroc_abs_diff": 1.0146344081585212e-06,
+      "bank_rows_cpu": 22579,
+      "bank_rows_gpu": 22579,
+      "threshold_cpu": 1.7818135023117065,
+      "threshold_gpu": 1.781813383102417
+    }
+  ],
+  "robustness_overlap": {
+    "category": "leather",
+    "settings": [
+      {
+        "setting": "brightness:x0.6",
+        "image_auroc_cpu": 1.0,
+        "image_auroc_gpu": 1.0,
+        "fpr_normals_cpu": 0.21875,
+        "fpr_normals_gpu": 0.21875
+      },
+      {
+        "setting": "brightness:x0.8",
+        "image_auroc_cpu": 1.0,
+        "image_auroc_gpu": 1.0,
+        "fpr_normals_cpu": 0.1875,
+        "fpr_normals_gpu": 0.1875
+      },
+      {
+        "setting": "brightness:x1.2",
+        "image_auroc_cpu": 1.0,
+        "image_auroc_gpu": 1.0,
+        "fpr_normals_cpu": 0.90625,
+        "fpr_normals_gpu": 0.90625
+      },
+      {
+        "setting": "brightness:x1.4",
+        "image_auroc_cpu": 1.0,
+        "image_auroc_gpu": 1.0,
+        "fpr_normals_cpu": 1.0,
+        "fpr_normals_gpu": 1.0
+      },
+      {
+        "setting": "gaussian_noise:sigma5",
+        "image_auroc_cpu": 1.0,
+        "image_auroc_gpu": 1.0,
+        "fpr_normals_cpu": 1.0,
+        "fpr_normals_gpu": 1.0
+      },
+      {
+        "setting": "none:-",
+        "image_auroc_cpu": 1.0,
+        "image_auroc_gpu": 1.0,
+        "fpr_normals_cpu": 0.34375,
+        "fpr_normals_gpu": 0.34375
+      }
+    ],
+    "max_abs_auroc_diff": 0.0,
+    "max_abs_fpr_diff": 0.0
+  }
+}

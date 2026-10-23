@@ -1,0 +1,63 @@
+seed: 0
+
+paths:
+  data_dir: data/mvtec_ad
+  raw_dir: data/raw
+  cache_dir: cache
+  artifacts_dir: artifacts
+  results_dir: results
+  logs_dir: logs
+
+data:
+  calib_fraction: 0.1
+  min_calib: 10
+  resize: 256
+  crop: 224
+
+backbone:
+  name: resnet50          # resnet50 | wide_resnet50_2 | resnet18
+  weights: imagenet       # imagenet for real runs; random is for unit tests only
+  layers: [layer2, layer3]
+
+patchcore:
+  pool_kernel: 3
+  reduce_dim: null        # null keeps 1536 dims; an int applies channel-wise adaptive average pooling
+  coreset_ratio: 0.1
+  coreset_proj_dim: 128
+  min_bank: 1000          # bank floor for tiny pools (few-shot study); never binds on full runs
+  knn_backend: torch      # torch | faiss
+  map_sigma: 4.0
+  batch_size: 16
+  extractor_backend: torch  # torch | onnx
+
+postprocess:
+  morph_kernel: 5
+  min_area: 30
+  box_iou_hit: 0.1
+
+cascade:
+  backbone: resnet18
+  input_size: 128
+  quantiles: [0, 25, 50, 75]
+  defect_rates: [0.01, 0.05, 0.20]
+  serve_q: 50             # API cascade quantile, fixed a priori (not tuned on test labels)
+
+latency:
+  warmup: 5
+  max_images: 60
+
+api:
+  max_upload_bytes: 10485760
+  max_pixels: 25000000
+  min_side: 32
+  max_side: 8192
+  api_key: null
+  cors_origins: []
+  concurrency: 1
+  lru_categories: 2
+  request_timeout_s: 60
+  use_cascade_default: false
+  knn_backend: faiss          # serving backends chosen by measurement (see docs/DECISIONS.md D14)
+  extractor_backend: onnx
+
+threads: 4

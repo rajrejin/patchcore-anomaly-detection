@@ -1,0 +1,192 @@
+{
+  "none:-": {
+    "perturbation": "none",
+    "severity": "-",
+    "image_auroc": 1.0,
+    "fpr_normals": 0.34375,
+    "recall": 1.0,
+    "f1": 0.9435897435897436,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "brightness:x0.6": {
+    "perturbation": "brightness",
+    "severity": "x0.6",
+    "image_auroc": 1.0,
+    "fpr_normals": 0.21875,
+    "recall": 1.0,
+    "f1": 0.9633507853403142,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "brightness:x0.8": {
+    "perturbation": "brightness",
+    "severity": "x0.8",
+    "image_auroc": 1.0,
+    "fpr_normals": 0.1875,
+    "recall": 1.0,
+    "f1": 0.968421052631579,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "brightness:x1.2": {
+    "perturbation": "brightness",
+    "severity": "x1.2",
+    "image_auroc": 1.0,
+    "fpr_normals": 0.90625,
+    "recall": 1.0,
+    "f1": 0.8638497652582159,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "brightness:x1.4": {
+    "perturbation": "brightness",
+    "severity": "x1.4",
+    "image_auroc": 1.0,
+    "fpr_normals": 1.0,
+    "recall": 1.0,
+    "f1": 0.8518518518518519,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "gaussian_noise:sigma5": {
+    "perturbation": "gaussian_noise",
+    "severity": "sigma5",
+    "image_auroc": 1.0,
+    "fpr_normals": 1.0,
+    "recall": 1.0,
+    "f1": 0.8518518518518519,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "gaussian_noise:sigma10": {
+    "perturbation": "gaussian_noise",
+    "severity": "sigma10",
+    "image_auroc": 1.0,
+    "fpr_normals": 1.0,
+    "recall": 1.0,
+    "f1": 0.8518518518518519,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "gaussian_noise:sigma20": {
+    "perturbation": "gaussian_noise",
+    "severity": "sigma20",
+    "image_auroc": 0.9660326086956522,
+    "fpr_normals": 1.0,
+    "recall": 1.0,
+    "f1": 0.8518518518518519,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "gaussian_blur:sigma1": {
+    "perturbation": "gaussian_blur",
+    "severity": "sigma1",
+    "image_auroc": 1.0,
+    "fpr_normals": 1.0,
+    "recall": 1.0,
+    "f1": 0.8518518518518519,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "gaussian_blur:sigma2": {
+    "perturbation": "gaussian_blur",
+    "severity": "sigma2",
+    "image_auroc": 1.0,
+    "fpr_normals": 1.0,
+    "recall": 1.0,
+    "f1": 0.8518518518518519,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "gaussian_blur:sigma3": {
+    "perturbation": "gaussian_blur",
+    "severity": "sigma3",
+    "image_auroc": 1.0,
+    "fpr_normals": 1.0,
+    "recall": 1.0,
+    "f1": 0.8518518518518519,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "jpeg:q60": {
+    "perturbation": "jpeg",
+    "severity": "q60",
+    "image_auroc": 1.0,
+    "fpr_normals": 1.0,
+    "recall": 1.0,
+    "f1": 0.8518518518518519,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "jpeg:q30": {
+    "perturbation": "jpeg",
+    "severity": "q30",
+    "image_auroc": 0.9979619565217391,
+    "fpr_normals": 1.0,
+    "recall": 1.0,
+    "f1": 0.8518518518518519,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "rotation:2deg": {
+    "perturbation": "rotation",
+    "severity": "2deg",
+    "image_auroc": 1.0,
+    "fpr_normals": 0.59375,
+    "recall": 1.0,
+    "f1": 0.9064039408866995,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "rotation:5deg": {
+    "perturbation": "rotation",
+    "severity": "5deg",
+    "image_auroc": 0.9996603260869565,
+    "fpr_normals": 1.0,
+    "recall": 1.0,
+    "f1": 0.8518518518518519,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "rotation:10deg": {
+    "perturbation": "rotation",
+    "severity": "10deg",
+    "image_auroc": 0.9996603260869565,
+    "fpr_normals": 1.0,
+    "recall": 1.0,
+    "f1": 0.8518518518518519,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "translation:4px": {
+    "perturbation": "translation",
+    "severity": "4px",
+    "image_auroc": 1.0,
+    "fpr_normals": 0.59375,
+    "recall": 1.0,
+    "f1": 0.9064039408866995,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "translation:8px": {
+    "perturbation": "translation",
+    "severity": "8px",
+    "image_auroc": 0.9969429347826086,
+    "fpr_normals": 1.0,
+    "recall": 1.0,
+    "f1": 0.8518518518518519,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  },
+  "translation:16px": {
+    "perturbation": "translation",
+    "severity": "16px",
+    "image_auroc": 0.984375,
+    "fpr_normals": 1.0,
+    "recall": 1.0,
+    "f1": 0.8518518518518519,
+    "threshold": 1.3588982820510864,
+    "seed": 0
+  }
+}

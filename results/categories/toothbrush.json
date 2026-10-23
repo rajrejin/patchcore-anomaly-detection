@@ -1,0 +1,49 @@
+{
+  "image_auroc": 1.0,
+  "image_auroc_ci95": [
+    0.9999999999999999,
+    1.0
+  ],
+  "pixel_auroc": 0.9866734975344057,
+  "au_pro": 0.8602439163094093,
+  "calibrated": {
+    "precision": 0.967741935483871,
+    "recall": 1.0,
+    "f1": 0.9836065573770492,
+    "fpr": 0.08333333333333333,
+    "tp": 30,
+    "fp": 1,
+    "fn": 0,
+    "tn": 11
+  },
+  "oracle_best_f1": {
+    "f1": 1.0,
+    "threshold": 1.7822513580322266,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "category": "toothbrush",
+  "seed": 0,
+  "config_hash": "7ab48005b48c8b97",
+  "model_version": "3b76e22d89f3",
+  "n_test": 42,
+  "n_test_good": 12,
+  "n_test_defective": 30,
+  "threshold_image": 1.736422061920166,
+  "threshold_pixel": 1.736422061920166,
+  "latency": {
+    "n": 42,
+    "p50_ms": 225.87264999947365,
+    "p95_ms": 251.29933499974865,
+    "mean_ms": 230.6923761904857,
+    "fps": 4.334776972318699,
+    "peak_rss_mb": 607.91015625
+  },
+  "rss_after_load_mb": 593.125,
+  "bank_shape": [
+    3920,
+    1536
+  ],
+  "bank_mb": 22.96875,
+  "eval_seconds": 26.09638285636902
+}

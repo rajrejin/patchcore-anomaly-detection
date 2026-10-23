@@ -1,0 +1,59 @@
+{
+  "docker_version": "Docker version 29.8.2, build 7fc2dff",
+  "compose_config_ok": true,
+  "build_and_start_seconds": 25.0,
+  "ready": {
+    "ready": true,
+    "categories": 15,
+    "loaded": [
+      "bottle",
+      "cable"
+    ],
+    "backends": {
+      "knn": "faiss",
+      "extractor": "onnx"
+    }
+  },
+  "health": {
+    "status": "ok"
+  },
+  "inspections": {
+    "defective": {
+      "status": 200,
+      "is_anomalous": true,
+      "anomaly_score": 3.361041307449341,
+      "stage_reached": 2,
+      "model_ms": 738.0656929999532,
+      "n_boxes": 1
+    },
+    "good_cascade": {
+      "status": 200,
+      "is_anomalous": false,
+      "anomaly_score": 1.3396596908569336,
+      "stage_reached": 2,
+      "model_ms": 672.4849500001255,
+      "n_boxes": 0
+    }
+  },
+  "path_traversal_category": {
+    "status": 404,
+    "body": {
+      "error": {
+        "code": "unknown_category",
+        "message": "unknown category",
+        "request_id": "1780a41feb60481d87b8ed6ac7c4bebc"
+      }
+    }
+  },
+  "app_health_http": 200,
+  "image_bytes": {
+    "mvtec-inspection-api:latest": 2946801253,
+    "mvtec-inspection-app:latest": 812055332
+  },
+  "container_user": "uid=10001(app) gid=10001(app) groups=10001(app)",
+  "read_only_root_fs": true,
+  "stats": [
+    "mvtec-inspection-app-1 60.69MiB / 512MiB",
+    "mvtec-inspection-api-1 1.067GiB / 3GiB"
+  ]
+}

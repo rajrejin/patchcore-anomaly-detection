@@ -1,0 +1,284 @@
+{
+  "coreset@0.01": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 0.9292929292929293,
+      "recall": 1.0,
+      "f1": 0.9633507853403142,
+      "fpr": 0.21875,
+      "tp": 92,
+      "fp": 7,
+      "fn": 0,
+      "tn": 25
+    },
+    "threshold": 1.470041275024414,
+    "bank_shape": [
+      1733,
+      1536
+    ],
+    "bank_mb": 10.154296875,
+    "n_calib": 24,
+    "device": "cuda",
+    "pixel_auroc": 0.9891948682404057,
+    "variant": "coreset@0.01",
+    "backbone": "resnet50",
+    "preprocessing": "none",
+    "coreset_ratio": 0.01,
+    "n_fit": null,
+    "seed": 0,
+    "latency": {
+      "n": 20,
+      "p50_ms": 205.27865000076417,
+      "p95_ms": 237.70730999858642,
+      "mean_ms": 203.407850000076,
+      "fps": 4.9162311090728625,
+      "peak_rss_mb": 514.0234375
+    },
+    "latency_note": "measured on the CPU after the study, banks rebuilt from order"
+  },
+  "coreset@0.1": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 0.8932038834951457,
+      "recall": 1.0,
+      "f1": 0.9435897435897436,
+      "fpr": 0.34375,
+      "tp": 92,
+      "fp": 11,
+      "fn": 0,
+      "tn": 21
+    },
+    "threshold": 1.3588982820510864,
+    "bank_shape": [
+      17326,
+      1536
+    ],
+    "bank_mb": 101.51953125,
+    "n_calib": 24,
+    "device": "cuda",
+    "pixel_auroc": 0.9892113048996547,
+    "variant": "coreset@0.1",
+    "backbone": "resnet50",
+    "preprocessing": "none",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 0,
+    "latency": {
+      "n": 20,
+      "p50_ms": 730.536299999585,
+      "p95_ms": 830.0626899985218,
+      "mean_ms": 708.7179299996933,
+      "fps": 1.4109985900884894,
+      "peak_rss_mb": 887.0546875
+    },
+    "latency_note": "measured on the CPU after the study, banks rebuilt from order"
+  },
+  "coreset@0.25": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 0.9019607843137255,
+      "recall": 1.0,
+      "f1": 0.9484536082474228,
+      "fpr": 0.3125,
+      "tp": 92,
+      "fp": 10,
+      "fn": 0,
+      "tn": 22
+    },
+    "threshold": 1.3459993600845337,
+    "bank_shape": [
+      43316,
+      1536
+    ],
+    "bank_mb": 253.8046875,
+    "n_calib": 24,
+    "device": "cuda",
+    "pixel_auroc": 0.9892356486984545,
+    "variant": "coreset@0.25",
+    "backbone": "resnet50",
+    "preprocessing": "none",
+    "coreset_ratio": 0.25,
+    "n_fit": null,
+    "seed": 0,
+    "latency": {
+      "n": 20,
+      "p50_ms": 1547.5726000004215,
+      "p95_ms": 1886.2597999979698,
+      "mean_ms": 1574.3729800004076,
+      "fps": 0.6351735025328884,
+      "peak_rss_mb": 1410.9296875
+    },
+    "latency_note": "measured on the CPU after the study, banks rebuilt from order"
+  },
+  "_meta": {
+    "seed_default": 0
+  },
+  "baseline_seed1": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 0.92,
+      "recall": 1.0,
+      "f1": 0.9583333333333334,
+      "fpr": 0.25,
+      "tp": 92,
+      "fp": 8,
+      "fn": 0,
+      "tn": 24
+    },
+    "threshold": 1.3938889503479004,
+    "bank_shape": [
+      17326,
+      1536
+    ],
+    "bank_mb": 101.51953125,
+    "n_calib": 24,
+    "device": "cuda",
+    "pixel_auroc": 0.9892706411432352,
+    "variant": "baseline_seed1",
+    "backbone": "resnet50",
+    "preprocessing": "none",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 1
+  },
+  "baseline_seed2": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 0.7796610169491526,
+      "recall": 1.0,
+      "f1": 0.8761904761904762,
+      "fpr": 0.8125,
+      "tp": 92,
+      "fp": 26,
+      "fn": 0,
+      "tn": 6
+    },
+    "threshold": 1.2594751119613647,
+    "bank_shape": [
+      17326,
+      1536
+    ],
+    "bank_mb": 101.51953125,
+    "n_calib": 24,
+    "device": "cuda",
+    "pixel_auroc": 0.989190744744269,
+    "variant": "baseline_seed2",
+    "backbone": "resnet50",
+    "preprocessing": "none",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 2
+  },
+  "pre_gaussian_blur_k3_s1": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 0.8761904761904762,
+      "recall": 1.0,
+      "f1": 0.934010152284264,
+      "fpr": 0.40625,
+      "tp": 92,
+      "fp": 13,
+      "fn": 0,
+      "tn": 19
+    },
+    "threshold": 1.3183339834213257,
+    "bank_shape": [
+      17326,
+      1536
+    ],
+    "bank_mb": 101.51953125,
+    "n_calib": 24,
+    "device": "cuda",
+    "pixel_auroc": 0.9903538794699628,
+    "variant": "pre_gaussian_blur_k3_s1",
+    "backbone": "resnet50",
+    "preprocessing": "gaussian_blur_k3_s1",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 0
+  },
+  "pre_cielab": {
+    "image_auroc": 0.9150815217391304,
+    "calibrated": {
+      "precision": 0.8736842105263158,
+      "recall": 0.9021739130434783,
+      "f1": 0.8877005347593583,
+      "fpr": 0.375,
+      "tp": 83,
+      "fp": 12,
+      "fn": 9,
+      "tn": 20
+    },
+    "threshold": 1.2296940088272095,
+    "bank_shape": [
+      17326,
+      1536
+    ],
+    "bank_mb": 101.51953125,
+    "n_calib": 24,
+    "device": "cuda",
+    "pixel_auroc": 0.9762399411383589,
+    "variant": "pre_cielab",
+    "backbone": "resnet50",
+    "preprocessing": "cielab",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 0
+  },
+  "pre_gray_opening_3x3": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 0.9387755102040817,
+      "recall": 1.0,
+      "f1": 0.968421052631579,
+      "fpr": 0.1875,
+      "tp": 92,
+      "fp": 6,
+      "fn": 0,
+      "tn": 26
+    },
+    "threshold": 1.3747994899749756,
+    "bank_shape": [
+      17326,
+      1536
+    ],
+    "bank_mb": 101.51953125,
+    "n_calib": 24,
+    "device": "cuda",
+    "pixel_auroc": 0.9875803373662101,
+    "variant": "pre_gray_opening_3x3",
+    "backbone": "resnet50",
+    "preprocessing": "gray_opening_3x3",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 0
+  },
+  "backbone_wide_resnet50_2": {
+    "image_auroc": 1.0,
+    "calibrated": {
+      "precision": 0.92,
+      "recall": 1.0,
+      "f1": 0.9583333333333334,
+      "fpr": 0.25,
+      "tp": 92,
+      "fp": 8,
+      "fn": 0,
+      "tn": 24
+    },
+    "threshold": 1.4413120746612549,
+    "bank_shape": [
+      17326,
+      1536
+    ],
+    "bank_mb": 101.51953125,
+    "n_calib": 24,
+    "device": "cuda",
+    "pixel_auroc": 0.9906095318517845,
+    "variant": "backbone_wide_resnet50_2",
+    "backbone": "wide_resnet50_2",
+    "preprocessing": "none",
+    "coreset_ratio": 0.1,
+    "n_fit": null,
+    "seed": 0
+  }
+}

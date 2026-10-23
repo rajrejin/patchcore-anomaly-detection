@@ -1,0 +1,49 @@
+{
+  "image_auroc": 1.0,
+  "image_auroc_ci95": [
+    0.9999999999999999,
+    1.0
+  ],
+  "pixel_auroc": 0.9844896929621179,
+  "au_pro": 0.9283902323437312,
+  "calibrated": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "fpr": 0.0,
+    "tp": 70,
+    "fp": 0,
+    "fn": 0,
+    "tn": 40
+  },
+  "oracle_best_f1": {
+    "f1": 1.0,
+    "threshold": 2.483372211456299,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "category": "hazelnut",
+  "seed": 0,
+  "config_hash": "7ab48005b48c8b97",
+  "model_version": "8b133918779a",
+  "n_test": 110,
+  "n_test_good": 40,
+  "n_test_defective": 70,
+  "threshold_image": 2.4519269466400146,
+  "threshold_pixel": 2.4519269466400146,
+  "latency": {
+    "n": 60,
+    "p50_ms": 870.800099999542,
+    "p95_ms": 907.7631849987483,
+    "mean_ms": 870.9790283334465,
+    "fps": 1.1481332701126288,
+    "peak_rss_mb": 982.02734375
+  },
+  "rss_after_load_mb": 869.8515625,
+  "bank_shape": [
+    27597,
+    1536
+  ],
+  "bank_mb": 161.701171875,
+  "eval_seconds": 161.2870578765869
+}

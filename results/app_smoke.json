@@ -1,0 +1,23 @@
+[
+  {
+    "category": "bottle",
+    "sample": "broken_large/000.png",
+    "verdict": [
+      "ANOMALOUS"
+    ]
+  },
+  {
+    "category": "cable",
+    "sample": "bent_wire/000.png",
+    "verdict": [
+      "ANOMALOUS"
+    ]
+  },
+  {
+    "category": "capsule",
+    "sample": "crack/000.png",
+    "verdict": [
+      "ANOMALOUS"
+    ]
+  }
+]

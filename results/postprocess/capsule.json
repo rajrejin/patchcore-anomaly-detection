@@ -1,0 +1,77 @@
+{
+  "category": "capsule",
+  "seed": 0,
+  "box_hit_definition": "a predicted box counts as a hit when its IoU with the bounding rectangle of a ground truth region is at least 0.1",
+  "threshold_pixel": 1.390102505683899,
+  "flagged_defective": {
+    "n_images": 91,
+    "raw_mean_iou": 0.28807703301323506,
+    "raw_mean_dice": 0.4150266602126672,
+    "clean_mean_iou": 0.28307343101950905,
+    "clean_mean_dice": 0.40741173275008724,
+    "box_hit_rate_images": 0.8571428571428571,
+    "box_precision": 0.8863636363636364,
+    "boxes_per_image": 0.967032967032967
+  },
+  "all_defective": {
+    "n_images": 109,
+    "raw_mean_iou": 0.24050467893765495,
+    "raw_mean_dice": 0.34649014751699747,
+    "clean_mean_iou": 0.23632735984197542,
+    "clean_mean_dice": 0.34013273101154073,
+    "box_hit_rate_images": 0.7155963302752294,
+    "box_precision": 0.8863636363636364,
+    "boxes_per_image": 0.8073394495412844
+  },
+  "alpha_sensitivity": [
+    {
+      "alpha": 0.6,
+      "mean_iou_defective": 0.051008404078241865,
+      "mean_dice_defective": 0.09197780344145376,
+      "normal_pixel_fp_fraction": 0.06925968417258209,
+      "normal_images_with_any_pixel": 0.9130434782608695
+    },
+    {
+      "alpha": 0.7,
+      "mean_iou_defective": 0.0993846736799161,
+      "mean_dice_defective": 0.17112000304813693,
+      "normal_pixel_fp_fraction": 0.013806184838065661,
+      "normal_images_with_any_pixel": 0.6086956521739131
+    },
+    {
+      "alpha": 0.8,
+      "mean_iou_defective": 0.17018564488263824,
+      "mean_dice_defective": 0.27178448529856475,
+      "normal_pixel_fp_fraction": 0.0032182370230700976,
+      "normal_images_with_any_pixel": 0.13043478260869565
+    },
+    {
+      "alpha": 0.9,
+      "mean_iou_defective": 0.22515026614030587,
+      "mean_dice_defective": 0.3378346528865236,
+      "normal_pixel_fp_fraction": 0.0007192075199645076,
+      "normal_images_with_any_pixel": 0.08695652173913043
+    },
+    {
+      "alpha": 1.0,
+      "mean_iou_defective": 0.24050467893765495,
+      "mean_dice_defective": 0.34649014751699747,
+      "normal_pixel_fp_fraction": 8.92510536823425e-05,
+      "normal_images_with_any_pixel": 0.043478260869565216
+    },
+    {
+      "alpha": 1.1,
+      "mean_iou_defective": 0.18965866943494777,
+      "mean_dice_defective": 0.26989196701223495,
+      "normal_pixel_fp_fraction": 0.0,
+      "normal_images_with_any_pixel": 0.0
+    },
+    {
+      "alpha": 1.2,
+      "mean_iou_defective": 0.17473606391036045,
+      "mean_dice_defective": 0.2452363394589324,
+      "normal_pixel_fp_fraction": 0.0,
+      "normal_images_with_any_pixel": 0.0
+    }
+  ]
+}

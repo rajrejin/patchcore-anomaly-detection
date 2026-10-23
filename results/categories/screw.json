@@ -1,0 +1,49 @@
+{
+  "image_auroc": 0.9497847919655668,
+  "image_auroc_ci95": [
+    0.9150384648187633,
+    0.9771496100120308
+  ],
+  "pixel_auroc": 0.989640932480623,
+  "au_pro": 0.9442657852617722,
+  "calibrated": {
+    "precision": 1.0,
+    "recall": 0.48739495798319327,
+    "f1": 0.655367231638418,
+    "fpr": 0.0,
+    "tp": 58,
+    "fp": 0,
+    "fn": 61,
+    "tn": 41
+  },
+  "oracle_best_f1": {
+    "f1": 0.9344262295081968,
+    "threshold": 1.515183448791504,
+    "precision": 0.912,
+    "recall": 0.957983193277311
+  },
+  "category": "screw",
+  "seed": 0,
+  "config_hash": "7ab48005b48c8b97",
+  "model_version": "9d0e29ccd8b6",
+  "n_test": 160,
+  "n_test_good": 41,
+  "n_test_defective": 119,
+  "threshold_image": 1.7818135023117065,
+  "threshold_pixel": 1.7818135023117065,
+  "latency": {
+    "n": 60,
+    "p50_ms": 735.3913500000999,
+    "p95_ms": 772.7795300014805,
+    "mean_ms": 734.4035366666503,
+    "fps": 1.3616492160956264,
+    "peak_rss_mb": 906.18359375
+  },
+  "rss_after_load_mb": 834.29296875,
+  "bank_shape": [
+    22579,
+    1536
+  ],
+  "bank_mb": 132.298828125,
+  "eval_seconds": 168.81226062774658
+}

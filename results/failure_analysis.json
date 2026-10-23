@@ -1,0 +1,67 @@
+{
+  "weakest_by_image_auroc": [
+    "screw",
+    "pill",
+    "grid"
+  ],
+  "categories": {
+    "screw": {
+      "image_auroc": 0.9497847919655668,
+      "n_false_negatives": 61,
+      "n_false_positives": 0,
+      "missed_defect_types": {
+        "manipulated_front": 16,
+        "scratch_head": 15,
+        "scratch_neck": 4,
+        "thread_side": 19,
+        "thread_top": 7
+      },
+      "worst_fn": [
+        "020.png|manipulated_front",
+        "019.png|thread_side",
+        "020.png|thread_side",
+        "004.png|thread_side"
+      ],
+      "worst_fp": []
+    },
+    "pill": {
+      "image_auroc": 0.9560829241680306,
+      "n_false_negatives": 30,
+      "n_false_positives": 1,
+      "missed_defect_types": {
+        "color": 6,
+        "contamination": 4,
+        "crack": 12,
+        "faulty_imprint": 4,
+        "scratch": 4
+      },
+      "worst_fn": [
+        "024.png|crack",
+        "001.png|crack",
+        "013.png|crack",
+        "005.png|scratch"
+      ],
+      "worst_fp": [
+        "023.png"
+      ]
+    },
+    "grid": {
+      "image_auroc": 0.9640768588137009,
+      "n_false_negatives": 3,
+      "n_false_positives": 3,
+      "missed_defect_types": {
+        "glue": 3
+      },
+      "worst_fn": [
+        "008.png|glue",
+        "000.png|glue",
+        "003.png|glue"
+      ],
+      "worst_fp": [
+        "018.png",
+        "003.png",
+        "006.png"
+      ]
+    }
+  }
+}

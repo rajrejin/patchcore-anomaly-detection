@@ -1,0 +1,21 @@
+{
+  "cpu": "AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx",
+  "physical_cores": 4,
+  "logical_cores": 8,
+  "ram_gb": 6.94,
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.14",
+  "libraries": {
+    "python": "3.13.14",
+    "torch": "2.14.1+cpu",
+    "torchvision": "0.29.1+cpu",
+    "numpy": "2.4.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1",
+    "opencv-python-headless": "5.0.0.93"
+  },
+  "torch_threads": 4,
+  "configured_threads": 4,
+  "seed": 0,
+  "gpu": "none (CPU only)"
+}

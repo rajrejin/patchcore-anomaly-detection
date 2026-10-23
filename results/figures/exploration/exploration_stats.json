@@ -1,0 +1,270 @@
+{
+  "bottle": {
+    "n_train": 209,
+    "n_test": 83,
+    "defect_types": {
+      "broken_large": 20,
+      "broken_small": 22,
+      "contamination": 21
+    },
+    "image_size": [
+      [
+        900,
+        900
+      ]
+    ],
+    "mask_area_fraction_mean": 0.07616560846560846
+  },
+  "cable": {
+    "n_train": 224,
+    "n_test": 150,
+    "defect_types": {
+      "bent_wire": 13,
+      "cable_swap": 12,
+      "combined": 11,
+      "cut_inner_insulation": 14,
+      "cut_outer_insulation": 10,
+      "missing_cable": 12,
+      "missing_wire": 10,
+      "poke_insulation": 10
+    },
+    "image_size": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "mask_area_fraction_mean": 0.04681168431821077
+  },
+  "capsule": {
+    "n_train": 219,
+    "n_test": 132,
+    "defect_types": {
+      "crack": 23,
+      "faulty_imprint": 22,
+      "poke": 21,
+      "scratch": 23,
+      "squeeze": 20
+    },
+    "image_size": [
+      [
+        1000,
+        1000
+      ]
+    ],
+    "mask_area_fraction_mean": 0.011088770642201836
+  },
+  "carpet": {
+    "n_train": 280,
+    "n_test": 117,
+    "defect_types": {
+      "color": 19,
+      "cut": 17,
+      "hole": 17,
+      "metal_contamination": 17,
+      "thread": 19
+    },
+    "image_size": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "mask_area_fraction_mean": 0.02106435111399447
+  },
+  "grid": {
+    "n_train": 264,
+    "n_test": 78,
+    "defect_types": {
+      "bent": 12,
+      "broken": 12,
+      "glue": 11,
+      "metal_contamination": 11,
+      "thread": 11
+    },
+    "image_size": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "mask_area_fraction_mean": 0.00945215057908443
+  },
+  "hazelnut": {
+    "n_train": 391,
+    "n_test": 110,
+    "defect_types": {
+      "crack": 18,
+      "cut": 17,
+      "hole": 18,
+      "print": 17
+    },
+    "image_size": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "mask_area_fraction_mean": 0.033546366010393416
+  },
+  "leather": {
+    "n_train": 245,
+    "n_test": 124,
+    "defect_types": {
+      "color": 19,
+      "cut": 19,
+      "fold": 17,
+      "glue": 19,
+      "poke": 18
+    },
+    "image_size": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "mask_area_fraction_mean": 0.008742208066193954
+  },
+  "metal_nut": {
+    "n_train": 220,
+    "n_test": 115,
+    "defect_types": {
+      "bent": 25,
+      "color": 22,
+      "flip": 23,
+      "scratch": 23
+    },
+    "image_size": [
+      [
+        700,
+        700
+      ]
+    ],
+    "mask_area_fraction_mean": 0.14488788676761025
+  },
+  "pill": {
+    "n_train": 267,
+    "n_test": 167,
+    "defect_types": {
+      "color": 25,
+      "combined": 17,
+      "contamination": 21,
+      "crack": 26,
+      "faulty_imprint": 19,
+      "pill_type": 9,
+      "scratch": 24
+    },
+    "image_size": [
+      [
+        800,
+        800
+      ]
+    ],
+    "mask_area_fraction_mean": 0.03977349290780142
+  },
+  "screw": {
+    "n_train": 320,
+    "n_test": 160,
+    "defect_types": {
+      "manipulated_front": 24,
+      "scratch_head": 24,
+      "scratch_neck": 25,
+      "thread_side": 23,
+      "thread_top": 23
+    },
+    "image_size": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "mask_area_fraction_mean": 0.0033547778089507286
+  },
+  "tile": {
+    "n_train": 230,
+    "n_test": 117,
+    "defect_types": {
+      "crack": 17,
+      "glue_strip": 18,
+      "gray_stroke": 16,
+      "oil": 18,
+      "rough": 15
+    },
+    "image_size": [
+      [
+        840,
+        840
+      ]
+    ],
+    "mask_area_fraction_mean": 0.09802272297808014
+  },
+  "toothbrush": {
+    "n_train": 60,
+    "n_test": 42,
+    "defect_types": {
+      "defective": 30
+    },
+    "image_size": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "mask_area_fraction_mean": 0.02140976587931315
+  },
+  "transistor": {
+    "n_train": 213,
+    "n_test": 100,
+    "defect_types": {
+      "bent_lead": 10,
+      "cut_lead": 10,
+      "damaged_case": 10,
+      "misplaced": 10
+    },
+    "image_size": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "mask_area_fraction_mean": 0.11982996463775634
+  },
+  "wood": {
+    "n_train": 247,
+    "n_test": 79,
+    "defect_types": {
+      "color": 8,
+      "combined": 11,
+      "hole": 10,
+      "liquid": 10,
+      "scratch": 21
+    },
+    "image_size": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "mask_area_fraction_mean": 0.05085334777832031
+  },
+  "zipper": {
+    "n_train": 240,
+    "n_test": 151,
+    "defect_types": {
+      "broken_teeth": 19,
+      "combined": 16,
+      "fabric_border": 17,
+      "fabric_interior": 16,
+      "rough": 17,
+      "split_teeth": 18,
+      "squeezed_teeth": 16
+    },
+    "image_size": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "mask_area_fraction_mean": 0.026240557181735
+  }
+}

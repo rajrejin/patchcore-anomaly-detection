@@ -1,0 +1,149 @@
+{
+  "category": "metal_nut",
+  "seed": 0,
+  "stage1_auroc_alone": 0.8093841642228738,
+  "stage1_latency_ms_mean": 39.71275500010355,
+  "stage2_latency_ms_mean": 542.7905816666074,
+  "patchcore_alone": {
+    "precision": 0.989247311827957,
+    "recall": 0.989247311827957,
+    "f1": 0.989247311827957,
+    "fpr": 0.045454545454545456,
+    "tp": 92,
+    "fp": 1,
+    "fn": 1,
+    "tn": 21,
+    "image_auroc": 0.9965786901270772
+  },
+  "latency_note": "mean latency is computed from measured per-stage means and the measured skip fractions, not from timing the combined pipeline",
+  "rows": [
+    {
+      "q": 0.0,
+      "stage1_threshold": null,
+      "normal_skipped": 0.0,
+      "defective_wrongly_skipped": 0.0,
+      "image_auroc": 0.9965786901270772,
+      "precision": 0.989247311827957,
+      "recall": 0.989247311827957,
+      "f1": 0.989247311827957,
+      "mean_latency_ms": 542.7905816666074,
+      "speedup": 1.0,
+      "production_mix_calculation": {
+        "0.01": {
+          "skip_rate": 0.0,
+          "mean_latency_ms": 542.7905816666074,
+          "speedup": 1.0,
+          "defects_wrongly_skipped_per_1000_items": 0.0
+        },
+        "0.05": {
+          "skip_rate": 0.0,
+          "mean_latency_ms": 542.7905816666074,
+          "speedup": 1.0,
+          "defects_wrongly_skipped_per_1000_items": 0.0
+        },
+        "0.2": {
+          "skip_rate": 0.0,
+          "mean_latency_ms": 542.7905816666074,
+          "speedup": 1.0,
+          "defects_wrongly_skipped_per_1000_items": 0.0
+        }
+      }
+    },
+    {
+      "q": 25.0,
+      "stage1_threshold": 9.86638069152832,
+      "normal_skipped": 0.18181818181818182,
+      "defective_wrongly_skipped": 0.0,
+      "image_auroc": 0.9965786901270772,
+      "precision": 0.989247311827957,
+      "recall": 0.989247311827957,
+      "f1": 0.989247311827957,
+      "mean_latency_ms": 563.6236642609159,
+      "speedup": 0.9630372464548183,
+      "production_mix_calculation": {
+        "0.01": {
+          "skip_rate": 0.18,
+          "mean_latency_ms": 484.8010319667216,
+          "speedup": 1.1196151531786889,
+          "defects_wrongly_skipped_per_1000_items": 0.0
+        },
+        "0.05": {
+          "skip_rate": 0.17272727272727273,
+          "mean_latency_ms": 488.74859983338786,
+          "speedup": 1.1105721466038823,
+          "defects_wrongly_skipped_per_1000_items": 0.0
+        },
+        "0.2": {
+          "skip_rate": 0.14545454545454548,
+          "mean_latency_ms": 503.5519793333862,
+          "speedup": 1.0779236383603659,
+          "defects_wrongly_skipped_per_1000_items": 0.0
+        }
+      }
+    },
+    {
+      "q": 50.0,
+      "stage1_threshold": 10.67020320892334,
+      "normal_skipped": 0.2727272727272727,
+      "defective_wrongly_skipped": 0.08602150537634409,
+      "image_auroc": 0.9232649071358747,
+      "precision": 0.9882352941176471,
+      "recall": 0.9032258064516129,
+      "f1": 0.943820224719101,
+      "mean_latency_ms": 516.4244832464284,
+      "speedup": 1.0510550899028495,
+      "production_mix_calculation": {
+        "0.01": {
+          "skip_rate": 0.2708602150537634,
+          "mean_latency_ms": 435.48296298733635,
+          "speedup": 1.246410601101728,
+          "defects_wrongly_skipped_per_1000_items": 0.860215053763441
+        },
+        "0.05": {
+          "skip_rate": 0.2633919843597262,
+          "mean_latency_ms": 439.5366482697732,
+          "speedup": 1.2349154133183005,
+          "defects_wrongly_skipped_per_1000_items": 4.301075268817205
+        },
+        "0.2": {
+          "skip_rate": 0.235386119257087,
+          "mean_latency_ms": 454.7379680789113,
+          "speedup": 1.1936337402387658,
+          "defects_wrongly_skipped_per_1000_items": 17.20430107526882
+        }
+      }
+    },
+    {
+      "q": 75.0,
+      "stage1_threshold": 11.592411041259766,
+      "normal_skipped": 0.5909090909090909,
+      "defective_wrongly_skipped": 0.16129032258064516,
+      "image_auroc": 0.8839198435972628,
+      "precision": 0.9871794871794872,
+      "recall": 0.8279569892473119,
+      "f1": 0.9005847953216375,
+      "mean_latency_ms": 450.3456298261456,
+      "speedup": 1.2052755610755006,
+      "production_mix_calculation": {
+        "0.01": {
+          "skip_rate": 0.5866129032258065,
+          "mean_latency_ms": 264.09537771163815,
+          "speedup": 2.055282399752079,
+          "defects_wrongly_skipped_per_1000_items": 1.6129032258064515
+        },
+        "0.05": {
+          "skip_rate": 0.5694281524926686,
+          "mean_latency_ms": 273.4230985578737,
+          "speedup": 1.9851672537158322,
+          "defects_wrongly_skipped_per_1000_items": 8.064516129032258
+        },
+        "0.2": {
+          "skip_rate": 0.5049853372434018,
+          "mean_latency_ms": 308.40205173125696,
+          "speedup": 1.760009632295176,
+          "defects_wrongly_skipped_per_1000_items": 32.25806451612903
+        }
+      }
+    }
+  ]
+}

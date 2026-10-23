@@ -1,0 +1,9 @@
+# Text files get normalised line endings; these formats are binary and must never be converted.
+* text=auto
+*.pdf binary
+*.png binary
+*.jpg binary
+*.npy binary
+*.zip binary
+*.onnx binary
+*.pth binary

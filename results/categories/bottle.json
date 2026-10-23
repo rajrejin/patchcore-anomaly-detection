@@ -1,0 +1,49 @@
+{
+  "image_auroc": 1.0,
+  "image_auroc_ci95": [
+    1.0,
+    1.0
+  ],
+  "pixel_auroc": 0.9828573566776955,
+  "au_pro": 0.928632458440288,
+  "calibrated": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "fpr": 0.0,
+    "tp": 63,
+    "fp": 0,
+    "fn": 0,
+    "tn": 20
+  },
+  "oracle_best_f1": {
+    "f1": 1.0,
+    "threshold": 1.7436226606369019,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "category": "bottle",
+  "seed": 0,
+  "config_hash": "7ab48005b48c8b97",
+  "model_version": "e31119743338",
+  "n_test": 83,
+  "n_test_good": 20,
+  "n_test_defective": 63,
+  "threshold_image": 1.827149748802185,
+  "threshold_pixel": 1.827149748802185,
+  "latency": {
+    "n": 60,
+    "p50_ms": 667.345000008936,
+    "p95_ms": 750.0214799831156,
+    "mean_ms": 650.9156466655744,
+    "fps": 1.5362973760466034,
+    "peak_rss_mb": 752.59375
+  },
+  "rss_after_load_mb": 651.37109375,
+  "bank_shape": [
+    14739,
+    1536
+  ],
+  "bank_mb": 86.361328125,
+  "eval_seconds": 109.69924974441528
+}

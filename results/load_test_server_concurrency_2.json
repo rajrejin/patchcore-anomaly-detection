@@ -1,0 +1,43 @@
+{
+  "url": "http://127.0.0.1:8123",
+  "category": "bottle",
+  "label": "server_concurrency_2",
+  "levels": [
+    {
+      "concurrency": 1,
+      "requests": 24,
+      "errors": 0,
+      "p50_ms": 578.0207000007067,
+      "p95_ms": 594.9733349995768,
+      "throughput_rps": 1.7355750715186387
+    },
+    {
+      "concurrency": 2,
+      "requests": 24,
+      "errors": 0,
+      "p50_ms": 967.628400000649,
+      "p95_ms": 999.2904999996426,
+      "throughput_rps": 2.06932092311018
+    },
+    {
+      "concurrency": 4,
+      "requests": 24,
+      "errors": 0,
+      "p50_ms": 1877.052349999758,
+      "p95_ms": 1979.439444998934,
+      "throughput_rps": 2.1164629413821223
+    }
+  ],
+  "ready": {
+    "ready": true,
+    "categories": 15,
+    "loaded": [
+      "bottle",
+      "cable"
+    ],
+    "backends": {
+      "knn": "faiss",
+      "extractor": "onnx"
+    }
+  }
+}

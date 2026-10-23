@@ -1,0 +1,14 @@
+.venv
+.git
+__pycache__
+*.pyc
+data
+cache
+artifacts
+logs
+results
+.pytest_cache
+.mypy_cache
+.ruff_cache
+tests
+docs

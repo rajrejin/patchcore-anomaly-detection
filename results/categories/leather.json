@@ -1,0 +1,49 @@
+{
+  "image_auroc": 1.0,
+  "image_auroc_ci95": [
+    0.9999999999999999,
+    1.0
+  ],
+  "pixel_auroc": 0.9892121795641873,
+  "au_pro": 0.9613231350817542,
+  "calibrated": {
+    "precision": 0.8932038834951457,
+    "recall": 1.0,
+    "f1": 0.9435897435897436,
+    "fpr": 0.34375,
+    "tp": 92,
+    "fp": 11,
+    "fn": 0,
+    "tn": 21
+  },
+  "oracle_best_f1": {
+    "f1": 1.0,
+    "threshold": 1.622795581817627,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "category": "leather",
+  "seed": 0,
+  "config_hash": "7ab48005b48c8b97",
+  "model_version": "be666f76861f",
+  "n_test": 124,
+  "n_test_good": 32,
+  "n_test_defective": 92,
+  "threshold_image": 1.3589022159576416,
+  "threshold_pixel": 1.3589022159576416,
+  "latency": {
+    "n": 60,
+    "p50_ms": 590.4226000002382,
+    "p95_ms": 657.6620450002338,
+    "mean_ms": 597.7540716667136,
+    "fps": 1.672928796974493,
+    "peak_rss_mb": 835.75
+  },
+  "rss_after_load_mb": 741.484375,
+  "bank_shape": [
+    17326,
+    1536
+  ],
+  "bank_mb": 101.51953125,
+  "eval_seconds": 119.64929962158203
+}

@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-22",
+  "what": "git clone of the repository, new virtual environment from requirements-dev.txt, then the steps below on the build machine",
+  "steps": [
+    {
+      "step": "clone",
+      "exit_code": 0,
+      "seconds": 2
+    },
+    {
+      "step": "pdf identical to the original",
+      "exit_code": 0,
+      "seconds": 0
+    },
+    {
+      "step": "venv",
+      "exit_code": 0,
+      "seconds": 6
+    },
+    {
+      "step": "pip install requirements-dev",
+      "exit_code": 0,
+      "seconds": 183
+    },
+    {
+      "step": "pip install package",
+      "exit_code": 0,
+      "seconds": 9
+    },
+    {
+      "step": "ruff check",
+      "exit_code": 0,
+      "seconds": 1
+    },
+    {
+      "step": "ruff format check",
+      "exit_code": 0,
+      "seconds": 0
+    },
+    {
+      "step": "mypy (compiled wheel)",
+      "exit_code": 0,
+      "seconds": 35
+    },
+    {
+      "step": "mypy workaround install",
+      "exit_code": 0,
+      "seconds": 8
+    },
+    {
+      "step": "mypy (pure python)",
+      "exit_code": 0,
+      "seconds": 294
+    },
+    {
+      "step": "fetch-data bottle (official link)",
+      "exit_code": 1,
+      "seconds": 69
+    },
+    {
+      "step": "train bottle",
+      "exit_code": 1,
+      "seconds": 12
+    },
+    {
+      "step": "pytest with coverage",
+      "exit_code": 1,
+      "seconds": 29
+    },
+    {
+      "step": "pull latest commit",
+      "exit_code": 0,
+      "seconds": 2
+    },
+    {
+      "step": "commit in clone",
+      "exit_code": 0,
+      "seconds": 0
+    },
+    {
+      "step": "ruff check",
+      "exit_code": 0,
+      "seconds": 1
+    },
+    {
+      "step": "mypy",
+      "exit_code": 0,
+      "seconds": 31
+    },
+    {
+      "step": "fetch-data bottle from data/raw (no network expected)",
+      "exit_code": 0,
+      "seconds": 8
+    },
+    {
+      "step": "archive kept and recorded",
+      "exit_code": 0,
+      "seconds": 0
+    },
+    {
+      "step": "train bottle",
+      "exit_code": 0,
+      "seconds": 289
+    },
+    {
+      "step": "pytest with coverage",
+      "exit_code": 0,
+      "seconds": 232
+    }
+  ],
+  "pytest_summary": "71 passed, 5 skipped in 226.98s (0:03:46)",
+  "coverage": "86.99%",
+  "note": "the first fetch-data attempt hit HTTP 404 on every official link (KNOWN_ISSUES K10); after the fetch fix, bottle was installed from an archive placed in data/raw/"
+}

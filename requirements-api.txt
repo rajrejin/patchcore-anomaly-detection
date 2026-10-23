@@ -1,0 +1,23 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+# scipy, pandas and scikit-learn are pinned to older releases: newer binaries were blocked by a Windows App Control policy on the build machine.
+numpy==2.4.6
+scipy==1.15.3
+scikit-learn==1.6.1
+opencv-python-headless==5.0.0.93
+pillow==12.3.0
+pandas==2.2.3
+pyyaml==6.0.3
+tqdm==4.70.1
+psutil==7.2.2
+typer==0.27.3
+pydantic==2.14.0
+pydantic-settings==2.15.0
+fastapi==0.143.0
+uvicorn[standard]==0.54.0
+python-multipart==0.0.32
+prometheus-client==0.26.0
+httpx==0.28.1
+onnxruntime==1.31.0
+torch==2.14.1
+torchvision==0.29.1
+faiss-cpu==1.15.1

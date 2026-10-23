@@ -1,0 +1,28 @@
+# Multi-stage build. CPU-only torch. No data or artifacts are baked in (mount them read-only).
+FROM python:3.12.8-slim-bookworm AS builder
+ENV PIP_NO_CACHE_DIR=1 PIP_DISABLE_PIP_VERSION_CHECK=1
+WORKDIR /build
+COPY requirements-api.txt .
+RUN python -m venv /opt/venv && /opt/venv/bin/pip install -r requirements-api.txt
+# ImageNet weights are baked in (they are not dataset content); the manifest checksum is verified at load.
+ENV TORCH_HOME=/opt/torch
+RUN /opt/venv/bin/python -c "import torchvision as tv; tv.models.resnet50(weights=tv.models.ResNet50_Weights.IMAGENET1K_V1); tv.models.wide_resnet50_2(weights=tv.models.Wide_ResNet50_2_Weights.IMAGENET1K_V1); tv.models.resnet18(weights=tv.models.ResNet18_Weights.IMAGENET1K_V1)"
+
+FROM python:3.12.8-slim-bookworm
+RUN useradd --create-home --uid 10001 app && apt-get update \
+    && apt-get install -y --no-install-recommends libgomp1 curl \
+    && rm -rf /var/lib/apt/lists/*
+COPY --from=builder /opt/venv /opt/venv
+COPY --from=builder /opt/torch /opt/torch
+WORKDIR /app
+COPY src ./src
+COPY api ./api
+COPY configs ./configs
+ENV PATH=/opt/venv/bin:$PATH PYTHONPATH=/app:/app/src PYTHONUNBUFFERED=1 \
+    TORCH_HOME=/opt/torch MVI_CONFIG=/app/configs/default.yaml \
+    MVI_PATHS__ARTIFACTS_DIR=/artifacts MVI_THREADS=4
+USER app
+EXPOSE 8000
+HEALTHCHECK --interval=30s --timeout=5s --start-period=60s --retries=3 \
+    CMD curl -fsS http://127.0.0.1:8000/v1/health || exit 1
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]

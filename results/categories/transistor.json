@@ -1,0 +1,49 @@
+{
+  "image_auroc": 0.9995833333333333,
+  "image_auroc_ci95": [
+    0.9974779319041615,
+    1.0
+  ],
+  "pixel_auroc": 0.9674633007009583,
+  "au_pro": 0.9399013551515728,
+  "calibrated": {
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1": 0.9411764705882353,
+    "fpr": 0.08333333333333333,
+    "tp": 40,
+    "fp": 5,
+    "fn": 0,
+    "tn": 55
+  },
+  "oracle_best_f1": {
+    "f1": 0.9876543209876543,
+    "threshold": 2.033194065093994,
+    "precision": 0.975609756097561,
+    "recall": 1.0
+  },
+  "category": "transistor",
+  "seed": 0,
+  "config_hash": "7ab48005b48c8b97",
+  "model_version": "5ea52e58e8fd",
+  "n_test": 100,
+  "n_test_good": 60,
+  "n_test_defective": 40,
+  "threshold_image": 1.9284026622772217,
+  "threshold_pixel": 1.9284026622772217,
+  "latency": {
+    "n": 60,
+    "p50_ms": 527.2369999993316,
+    "p95_ms": 552.9475900013495,
+    "mean_ms": 527.8787049998755,
+    "fps": 1.8943745798577647,
+    "peak_rss_mb": 813.73046875
+  },
+  "rss_after_load_mb": 671.50390625,
+  "bank_shape": [
+    15053,
+    1536
+  ],
+  "bank_mb": 88.201171875,
+  "eval_seconds": 95.6088764667511
+}

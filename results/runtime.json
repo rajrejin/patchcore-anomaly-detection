@@ -1,0 +1,36 @@
+{
+  "evaluate_seconds": {
+    "bottle": 109.7,
+    "cable": 167.9,
+    "capsule": 144.4,
+    "carpet": 135.6,
+    "grid": 92.4,
+    "hazelnut": 161.3,
+    "leather": 119.7,
+    "metal_nut": 102.1,
+    "pill": 153.2,
+    "screw": 168.8,
+    "tile": 108.8,
+    "toothbrush": 26.1,
+    "transistor": 95.6,
+    "wood": 94.2,
+    "zipper": 147.8
+  },
+  "train_seconds": {
+    "bottle": 374.7,
+    "cable": 347.7,
+    "capsule": 339.8,
+    "carpet": 554.4,
+    "grid": 464.2,
+    "hazelnut": 1070.3,
+    "leather": 364.0,
+    "metal_nut": 226.6,
+    "pill": 320.7,
+    "screw": 446.7,
+    "tile": 247.1,
+    "toothbrush": 24.1,
+    "transistor": 216.7,
+    "wood": 282.6,
+    "zipper": 262.7
+  }
+}
