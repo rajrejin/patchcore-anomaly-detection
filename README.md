@@ -22,7 +22,7 @@ flowchart LR
   API --> UI["Streamlit app"]
 ```
 
-The full diagram with module names is in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). A study guide that explains the whole project for learning is in [docs/STUDY_GUIDE.pdf](docs/STUDY_GUIDE.pdf).
+The full diagram with module names is in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Quick start
 
