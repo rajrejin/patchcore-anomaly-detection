@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 import pytest
@@ -13,8 +14,13 @@ from inspection.cli import app
 runner = CliRunner()
 
 
+def plain(text: str) -> str:
+    """Drop terminal colour codes; on CI the help text is coloured, which splits option names."""
+    return re.sub(r"\x1b\[[0-9;]*m", "", text)
+
+
 def test_help_lists_every_command() -> None:
-    out = runner.invoke(app, ["--help"]).output
+    out = plain(runner.invoke(app, ["--help"]).output)
     for cmd in ("fetch-data", "verify-data", "explore", "train", "evaluate", "cascade", "ablate",
                 "studies", "export-onnx", "serve", "report"):  # fmt: skip
         assert cmd in out
@@ -23,13 +29,13 @@ def test_help_lists_every_command() -> None:
 def test_unknown_category_is_rejected() -> None:
     res = runner.invoke(app, ["train", "not_a_category"])
     assert res.exit_code != 0
-    assert "unknown categories" in res.output
+    assert "unknown categories" in plain(res.output)
 
 
 def test_train_needs_categories_or_all() -> None:
     res = runner.invoke(app, ["train"])
     assert res.exit_code != 0
-    assert "--all" in res.output
+    assert "--all" in plain(res.output)
 
 
 def test_verify_data_fails_on_empty_folder(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
