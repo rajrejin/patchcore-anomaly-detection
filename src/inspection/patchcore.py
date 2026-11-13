@@ -45,10 +45,10 @@ def build_extractor(settings: Settings) -> PatchFeatureExtractor:
 
 
 def gaussian_kernel1d(sigma: float, radius: int | None = None) -> torch.Tensor:
-    r = radius if radius is not None else int(4 * sigma + 0.5)
-    x = torch.arange(-r, r + 1, dtype=torch.float32)
-    k = torch.exp(-(x**2) / (2 * sigma**2))
-    return k / k.sum()
+    radius = radius if radius is not None else int(4 * sigma + 0.5)
+    x = torch.arange(-radius, radius + 1, dtype=torch.float32)
+    kernel = torch.exp(-(x**2) / (2 * sigma**2))
+    return kernel / kernel.sum()
 
 
 def gaussian_blur(maps: torch.Tensor, sigma: float) -> torch.Tensor:
@@ -97,17 +97,19 @@ class PatchCore:
     @torch.no_grad()
     def patch_scores(self, x: torch.Tensor) -> torch.Tensor:
         """(B, h, w) nearest-neighbour distance for every patch."""
-        desc = self.extractor.descriptors(x)
-        b, p, d = desc.shape
-        s = self.knn.search(desc.reshape(b * p, d)).cpu().reshape(b, p)
-        side = int(round(p**0.5))
-        return s.reshape(b, side, side)
+        descriptors = self.extractor.descriptors(x)
+        batch, n_patches, dim = descriptors.shape
+        # One long list of patches goes into the search; distances come back in the same order.
+        distances = self.knn.search(descriptors.reshape(batch * n_patches, dim)).cpu()
+        side = int(round(n_patches**0.5))  # patches form a square grid, e.g. 784 -> 28 x 28
+        return distances.reshape(batch, side, side)
 
     @torch.no_grad()
     def score(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
         """Image scores (max patch score) and anomaly maps (B, crop, crop)."""
-        ps = self.patch_scores(x)
-        return ps.flatten(1).max(1).values, to_anomaly_map(ps, self.crop, self.map_sigma)
+        patch_scores = self.patch_scores(x)
+        image_scores = patch_scores.flatten(1).max(1).values  # the most unusual patch decides
+        return image_scores, to_anomaly_map(patch_scores, self.crop, self.map_sigma)
 
     @property
     def version(self) -> str:
@@ -215,10 +217,15 @@ def build_bank(
     min_bank: int,
     device: str = "cpu",
 ) -> torch.Tensor:
+    """Keep `ratio` of the descriptors (at least `min_bank`) as the memory bank.
+
+    The coreset is chosen in a low-dimensional projection for speed, but the bank stores the
+    original full-size descriptors.
+    """
     n = feats.shape[0]
-    k = min(n, max(int(round(n * ratio)), min(n, min_bank)))
-    idx = np.sort(coreset_indices(feats, k, proj_dim, seed, device))
-    return torch.from_numpy(np.asarray(feats[idx], dtype=np.float32))
+    bank_size = min(n, max(int(round(n * ratio)), min(n, min_bank)))
+    keep = np.sort(coreset_indices(feats, bank_size, proj_dim, seed, device))
+    return torch.from_numpy(np.asarray(feats[keep], dtype=np.float32))
 
 
 @torch.no_grad()

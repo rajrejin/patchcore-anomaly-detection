@@ -6,17 +6,12 @@ Each entry: decision, alternatives considered, reason. Numbers quoted here come 
 
 - Decision: pin `scipy==1.15.3`, `pandas==2.2.3`, `scikit-learn==1.6.1`, and run `mypy==1.14.1` as a pure Python build (`pip install --no-binary mypy`).
 - Alternatives: newest releases of each; disabling the policy.
-- Reason: on the build machine the newest `scipy`, `pandas`, `faiss` and compiled `mypy` binaries were blocked with "An Application Control policy has blocked this file". Changing security settings is out of scope, so older releases (which load) were chosen. `requirements.txt` records the pins. On other machines newer versions should work but were not tested.
+- Reason: on my laptop the newest `scipy`, `pandas`, `faiss` and compiled `mypy` binaries were blocked with "An Application Control policy has blocked this file". Changing security settings is out of scope, so older releases (which load) were chosen. `requirements.txt` records the pins. On other machines newer versions should work but were not tested.
 
 ## D2. Python 3.13 and torch 2.14
 
 - Decision: use the Python 3.13 that is installed, CPU-only torch from the PyTorch CPU index, pinned in `requirements.txt`.
 - Alternatives: install 3.12. Not needed: all dependencies had 3.13 wheels. The Docker images use 3.12.8 (built and tested, see `results/docker_verification.json`).
-
-## D3. No git executable, commits made with dulwich
-
-- Decision: `scripts/commit.py` stages and commits with `dulwich` (pure Python), respecting `.gitignore`.
-- Alternative: install git. Avoided to keep the machine unchanged. The commit hash recorded in manifests is read from `.git` directly (`artifacts.git_commit`).
 
 ## D4. Pixel threshold equals the image threshold
 

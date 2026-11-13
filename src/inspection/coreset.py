@@ -30,23 +30,29 @@ def project_chunked(
 
 def greedy_kcenter(z: torch.Tensor, n_select: int, seed: int) -> np.ndarray:
     """Greedy k-center on already-projected points z (N, d), on whatever device z lives.
-    Deterministic given the seed. Returns the selected indices in selection order."""
+
+    Start from a random point, then repeatedly pick the point that is farthest from everything
+    picked so far. The result covers the whole point cloud evenly instead of oversampling
+    dense regions. Deterministic given the seed. Returns indices in selection order.
+    """
     n = z.shape[0]
     n_select = min(n_select, n)
     rng = np.random.default_rng(seed)
-    first = int(rng.integers(n))
-    sq = (z * z).sum(1)
+    newest = int(rng.integers(n))
     selected = np.empty(n_select, dtype=np.int64)
-    selected[0] = first
-    min_d = torch.full((n,), float("inf"), device=z.device)
-    cur = first
-    d = torch.empty(n, device=z.device)
+    selected[0] = newest
+
+    squared_norms = (z * z).sum(1)
+    # For every point: squared distance to its nearest already-selected point.
+    dist_to_selected = torch.full((n,), float("inf"), device=z.device)
+    dist_to_newest = torch.empty(n, device=z.device)
     for i in range(1, n_select):
-        torch.mv(z, z[cur], out=d)
-        d.mul_(-2.0).add_(sq).add_(sq[cur])
-        torch.minimum(min_d, d, out=min_d)
-        cur = int(torch.argmax(min_d))
-        selected[i] = cur
+        # ||a - b||^2 = ||a||^2 - 2 a.b + ||b||^2, computed in place to avoid new allocations.
+        torch.mv(z, z[newest], out=dist_to_newest)
+        dist_to_newest.mul_(-2.0).add_(squared_norms).add_(squared_norms[newest])
+        torch.minimum(dist_to_selected, dist_to_newest, out=dist_to_selected)
+        newest = int(torch.argmax(dist_to_selected))
+        selected[i] = newest
     return selected
 
 

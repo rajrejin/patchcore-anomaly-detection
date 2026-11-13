@@ -1,5 +1,5 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
-# scipy, pandas and scikit-learn are pinned to older releases: newer binaries were blocked by a Windows App Control policy on the build machine.
+# scipy, pandas and scikit-learn are pinned to older releases: newer binaries were blocked by a Windows App Control policy on my laptop.
 numpy==2.4.6
 scipy==1.15.3
 scikit-learn==1.6.1

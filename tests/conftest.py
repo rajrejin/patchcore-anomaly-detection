@@ -16,7 +16,7 @@ def settings():  # type: ignore[no-untyped-def]
 def data_root(settings) -> Path:  # type: ignore[no-untyped-def]
     root = settings.path("data_dir")
     if not (root / "bottle" / "test").is_dir():
-        pytest.skip("MVTec AD not found in data/mvtec_ad (see HANDOFF.md)")
+        pytest.skip("MVTec AD not found in data/mvtec_ad (run `mvinspect fetch-data`)")
     return root
 
 

@@ -14,5 +14,5 @@ logs
 *.onnx
 *.part
 *.tar.xz
-.build/*.lock
 colab/*.zip
+docs/*.pdf
